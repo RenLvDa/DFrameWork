@@ -102,13 +102,86 @@ namespace DFrameWork.Event.Dispatcher
 
         #region 增加监听器
 
+        /// <summary>
+        /// 增加消息监听 无参数
+        /// </summary>
+        /// <param name="msgId">消息ID</param>
+        /// <param name="handler"></param>
+        /// <param name="data"></param>
+        public void AddMsgListener(KeyT msgId, Action handler, object data = null)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            OnListenerAdding(msgId, handler, out list);
+            list.Add(new KeyValuePair<Delegate, object>(handler, data));
+        }
+
         #endregion
 
         #region 移除监听器
 
+        public bool RemoveHandlerInList(List<KeyValuePair<Delegate, object>> list, Delegate handler)
+        {
+            for(int i = 0; i < list.Count; i++)
+            {
+                if(list[i].Key == handler)
+                {
+                    list.RemoveAt(i);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 移除消息监听 无参数
+        /// </summary>
+        /// <param name="msgId">消息ID</param>
+        /// <param name="handler"></param>
+        public void RemoveMsgListener(KeyT msgId, Action handler)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            if(OnListenerRemoving(msgId, handler, out list))
+            {
+                RemoveHandlerInList(list, handler);
+                OnListenerRemoved(msgId, list);
+            }
+        }
+
         #endregion
 
         #region 派发事件
+
+        /// <summary>
+        /// 分发消息事件 无参数
+        /// </summary>
+        /// <param name="msgId"></param>
+        public void DispatchMsg(KeyT msgId)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            if(!_eventRouter.TryGetValue(msgId, out list))
+            {
+                return;
+            }
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                Action callback = list[i].Key as Action;
+
+                if(callback == null)
+                {
+                    throw new Exception(string.Format("触发消息 {0} 错误: 参数类型不匹配", msgId));
+                }
+
+                try
+                {
+                    callback();
+                }
+                catch(Exception e)
+                {
+                    Debug.LogError("Error: [EventSystem]--[DispatchMsg]--" + e.ToString());
+                }
+            }
+        }
 
         #endregion
     }
