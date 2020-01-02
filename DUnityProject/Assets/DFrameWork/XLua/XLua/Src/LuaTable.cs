@@ -25,6 +25,8 @@ namespace XLua
 {
     public partial class LuaTable : LuaBase
     {
+        public LuaEnv env { get { return luaEnv; } }
+
         public LuaTable(int reference, LuaEnv luaenv) : base(reference, luaenv)
         {
         }
