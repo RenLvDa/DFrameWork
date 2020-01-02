@@ -60,6 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\ControlItemDrawer.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\SubUIItemDrawer.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\UIControlDataEditor.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Editor\ExampleConfig.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Src\Editor\Generator.cs" />

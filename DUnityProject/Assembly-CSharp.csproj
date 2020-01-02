@@ -64,6 +64,11 @@
     <Compile Include="Assets\DFrameWork\Core\Event\LogicEventSystem.cs" />
     <Compile Include="Assets\DFrameWork\Core\Singleton\Singleton.cs" />
     <Compile Include="Assets\DFrameWork\Core\Singleton\UnitySingleton.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\ControlBindingAttribute.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\IBindableUI.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\SubUIBindingAttribute.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\UIBindingPrefabSaveHelper.cs" />
+    <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\UIControlData.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
