@@ -60,8 +60,67 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DFrameWork\Core\Event\EventController.cs" />
+    <Compile Include="Assets\DFrameWork\Core\Event\LogicEventSystem.cs" />
     <Compile Include="Assets\DFrameWork\Core\Singleton\Singleton.cs" />
     <Compile Include="Assets\DFrameWork\Core\Singleton\UnitySingleton.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\01_Helloworld\Helloworld.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\05_NoGc\NoGc.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\07_AsyncTest\MessageBox.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\08_Hotfix\HotfixTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\08_Hotfix\StatefullTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\09_GenericMethod\Foo.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\11_RawObject\RawObjectTest.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\ExampleGenConfig.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\CodeEmit.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\CopyByValue.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\DelegateBridge.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\GenAttributes.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\GenericDelegateBridge.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\InternalGlobals.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaBase.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaDLL.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaEnv.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaException.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaFunction.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\LuaTable.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\MethodWarpsCache.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\ObjectCasters.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\ObjectPool.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\ObjectTranslator.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\ObjectTranslatorPool.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\RawObject.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\SignatureLoader.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\StaticLuaCallbacks.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\TemplateEngine\TemplateEngine.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\TypeExtensions.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Src\Utils.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
+    <Compile Include="Assets\DFrameWork\XLua\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Resources\xlua\util.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Resources\perf\profiler.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Resources\perf\memory.lua.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\CHANGELOG.txt" />
+    <None Include="Assets\DFrameWork\XLua\XLua\Resources\tdr\tdr.lua.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Git Project/DFrameWork/DUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
