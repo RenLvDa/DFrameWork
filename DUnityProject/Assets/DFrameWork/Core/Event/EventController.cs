@@ -464,5 +464,60 @@ namespace DFrameWork.Event.Dispatcher
             }
         }
         #endregion
+
+        #region 使用params关键字不定长参数实现（弃用）
+        /*
+         * 消息系统不用这个的原因
+         * 使用这种不定长参数虽然可以让参数数量不受限制，但是实际开发中没有办法严格规定参数顺序，具体调用时没有泛型<T,U,V,W>这样的约束，容易出错
+         * 所以一般不用这种方法
+         */
+        public delegate void CallBack(params object[] objs);
+
+        public void AddMsgListenerOld(KeyT msgId, CallBack handler, object data = null)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            OnListenerAdding(msgId, handler, out list);
+            list.Add(new KeyValuePair<Delegate, object>(handler, data));
+        }
+
+
+        public void RemoveMsgListenerOld(KeyT msgId, CallBack handler)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            if (OnListenerRemoving(msgId, handler, out list))
+            {
+                RemoveHandlerInList(list, handler);
+                OnListenerRemoved(msgId, list);
+            }
+        }
+
+        public void DispatchMsgOld(KeyT msgId, params object[] objs)
+        {
+            List<KeyValuePair<Delegate, object>> list;
+            if (!_eventRouter.TryGetValue(msgId, out list))
+            {
+                return;
+            }
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                CallBack callback = list[i].Key as CallBack;
+
+                if (callback == null)
+                {
+                    throw new Exception(string.Format("触发消息 {0} 错误: 参数类型不匹配", msgId));
+                }
+
+                try
+                {
+                    callback(objs);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError("Error: [EventSystem]--[DispatchMsg]--" + e.ToString());
+                }
+            }
+        }
+        #endregion
     }
 }
