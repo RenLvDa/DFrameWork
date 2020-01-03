@@ -353,6 +353,15 @@
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Git Project/DFrameWork/DUnityProject/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>

@@ -63,6 +63,8 @@
     <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\ControlItemDrawer.cs" />
     <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\SubUIItemDrawer.cs" />
     <Compile Include="Assets\DFrameWork\Core\UIFrameWork\UIControlBinding\Scripts\Editor\UIControlDataEditor.cs" />
+    <Compile Include="Assets\DFrameWork\Core\Utils\Excel2Unity\Editor\ExcelTools.cs" />
+    <Compile Include="Assets\DFrameWork\Core\Utils\Excel2Unity\Editor\ExcelUtility.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Editor\ExampleConfig.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
     <Compile Include="Assets\DFrameWork\XLua\XLua\Src\Editor\Generator.cs" />
@@ -345,6 +347,15 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>D:/Git Project/DFrameWork/DUnityProject/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:/Git Project/DFrameWork/DUnityProject/Assets/DFrameWork/Core/Utils/Excel2Unity/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
